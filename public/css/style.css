@@ -1,3 +1,52 @@
-h1 {
-	background-color: lightgreen;
+
+/*========================================*/
+#logo {
+	color: #993333;
+	text-align: left;
+	font-size: 3.5em;
+	font-family: Comic Sans MS;
+	position: relative;
+	left:	-150px;
+	top: 50px;
+}
+
+body {
+	background-color: #FFCC99;
+}
+/*========================================*/
+
+
+#wrapper {
+	width: 900px;
+	margin: 0 auto;	
+}
+
+#nav_bar {
+	position: relative;
+	left: 250px;
+}
+
+li {
+	width: 85px;
+	text-align: center;
+	margin-right: 50px;
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: #993333;
+	display: inline-block;
+	padding: 25px;
+	font-family: Comic Sans MS;
+	font-size: 24px;
+}
+
+a:link {
+	color: #FFCC99;
+}
+
+a:visited {
+	color: #FFCC99;
+}
+
+a:hover {
+	color: white;
 }

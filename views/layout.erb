@@ -2,19 +2,31 @@
 <html>
 <head>
 	<title>Cookie Time</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
-<body>
-	<nav>
-		<div>Logo</div>
-		<ul>
-			<li>Home</li>
-			<li>Menu</li>
-			<li>Order</li>
-			<li>Reviews</li>
-		</ul>
-	</nav>
-	<footer>Copyright CookieTime 2015</footer>
-</body>
+<div id="wrapper">
+	<body>
+		<nav>
+			<div id="logo">
+				<h1>CookieTime</h1>
+			 </div>
+			<div id="nav_bar">
+				<ul>
+					<li><a href="home.erb">Home</a></li>
+					<li><a href="menu.erb">Menu</a></li>
+					<li><a href="order.erb">Order</a></li>
+					<li><a href="reviews.erb">Reviews</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="content">
+			<%=yield%>
+		</div>
+
+
+		<footer>Copyright CookieTime 2015</footer>
+	</body>
+</div>
 </html>
 
 
