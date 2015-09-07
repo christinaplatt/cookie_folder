@@ -1,1 +1,41 @@
-<h1>layout</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie Time</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<div id="wrapper">
+	<body>
+		<nav>
+			<div id="logo">
+				<h1>CookieTime</h1>
+			 </div>
+			<div id="nav_bar">
+				<ul>
+					<li><a href="home.erb">Home</a></li>
+					<li><a href="menu.erb">Menu</a></li>
+					<li><a href="order.erb">Order</a></li>
+					<li><a href="reviews.erb">Reviews</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="content">
+			<%=yield%>
+		</div>
+
+
+		<footer>Copyright CookieTime 2015</footer>
+	</body>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
