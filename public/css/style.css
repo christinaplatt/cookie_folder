@@ -67,3 +67,20 @@ h2 {
 p {
 	font-size: 1.25em;
 }
+#form {
+	font-family: "Comic Sans Ms", serif;
+	font-size: 20px;
+	width: 600px; 
+	padding: 0px;
+	display: inline-block;
+	float: left;
+	background color: #993333;
+}
+
+.order{ 
+	font-size: 20px
+}
+
+legend{
+	font-weight: bold;
+}

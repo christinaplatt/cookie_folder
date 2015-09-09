@@ -5,18 +5,18 @@ get '/' do
   erb :home
 end
 
-get '/home.erb' do
+get '/home' do
   erb :home
 end
 
-get '/menu.erb' do
+get '/menu' do
 	erb :menu
 end
 
-get '/order.erb' do
-	erb :order
+get '/order' do
+	erb :order 
 end
 
-get '/reviews.erb' do
+get '/reviews' do
 	erb :reviews
 end
