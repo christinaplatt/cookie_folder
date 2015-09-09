@@ -84,3 +84,32 @@ p {
 legend{
 	font-weight: bold;
 }
+
+#img1 {
+	border: 20px solid brown;
+	padding: 0 auto;
+}
+#img2 {
+	border: 20px solid brown;
+	padding: 0 auto;
+}
+#img3 {
+	border: 20px solid brown;
+	padding: 0 auto;
+}
+#img4 {
+	border: 20px solid brown;
+	padding: 0 auto;
+}
+#img5 {
+	border: 20px solid brown;
+	padding: 0 auto;
+}
+#img6 {
+	border: 20px solid brown;
+	padding: 0 auto;
+}
+p {
+	text-align: center;
+}
+
