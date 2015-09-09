@@ -1,1 +1,156 @@
-<h1>Order</h1>
+
+<h1>Get Your Cookie On. No, seriously.</h1>
+
+<h2>Order Now!</h2>
+
+<div id="form">
+<form method="POST" action="/sign-in" class="form-horizontal">
+
+<!-- Form Name -->
+<legend>Cookie Order Form</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Name</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="C. Monster" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- phone-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="phone">Phone</label>  
+  <div class="col-md-5">
+  <input id="phone" name="phone" type="text" placeholder="666-666-6666" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- email-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Email">Email</label>  
+  <div class="col-md-5">
+  <input id="Email" name="Email" type="text" placeholder="cmonster@cookietime.com" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- address-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Address">Address</label>  
+  <div class="col-md-5">
+  <input id="Address" name="Address" type="text" placeholder="street, city, zip" class="form-control input-md" required="">
+    
+  </div>
+</div>
+<br
+<!-- cookieform -->
+<div class="form-group">
+  <legend class="cookietitle" for="cookie order">Cookie Order</legend>
+  
+  <!-- cat-->
+  <div class="col-md-6">
+    <div class="input-group">
+      <span class="input-group-addon">$2 Cat</span>
+      <input id="cookie order" name="cookie order" class="form-control cookie" data-price="2" placeholder="enter amount" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!-- hedgehog-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cookieorder"></label>
+  <div class="col-md-6">
+    <div class="input-group">
+      <span class="input-group-addon">$1 Hedgehog</span>
+      <input id="cookieorder" name="cookieorder" class="form-control cookie" data-price="1" placeholder="enter amount" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!-- hello kitty -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cookieform"></label>
+  <div class="col-md-6">
+    <div class="input-group">
+      <span class="input-group-addon">$5 Hello Kitty</span>
+      <input id="cookieform" name="cookieform" class="form-control cookie" data-price="5" placeholder="enter amount" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!-- pinata -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cookieform"></label>
+  <div class="col-md-6">
+    <div class="input-group">
+      <span class="input-group-addon">$1 Pinata</span>
+      <input id="cookieform" name="cookieform" class="form-control cookie" data-price="1" placeholder="enter amount" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!-- sea creature-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cookieform"></label>
+  <div class="col-md-6">
+    <div class="input-group">
+      <span class="input-group-addon">$4 Sea Creature</span>
+      <input id="cookieform" name="cookieform" class="form-control cookie" data-price="4" placeholder="enter amount" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!--sunglasses-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cookieform"></label>
+  <div class="col-md-6">
+    <div class="input-group">
+      <span class="input-group-addon">$2 Sunglasses</span>
+      <input id="cookieform" name="cookieform" class="form-control cookie" data-price="2" placeholder="enter amount" type="text">
+    </div>
+</div>
+
+    <div>
+    	Total: <span id="display_total"></span>
+    </div>
+
+
+  </div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="select"></label>
+  <div class="col-md-4">
+    <button id="order_button" name="select" class="btn btn-primary" onclick="return false;">Order</button>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$("#order_button").click(function(){
+		var total = 0;
+		var cookies = $(".cookie");
+    for (var i = 0; i < cookies.length; i++) {
+      var price = $(cookies[i]).data("price");
+      var amount = $(cookies[i]).val();
+      if (amount) {
+        total += (amount * price)
+      }
+    }
+
+		$("#display_total").text(total);
+	});
+});
+
+</script>
+
+</form>
