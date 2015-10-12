@@ -4,7 +4,7 @@
 <h2>Order Now!</h2>
 
 <div id="form">
-<form method="POST" action="/sign-in" class="form-horizontal">
+<form method="POST" action="/order" class="form-horizontal">
 
 <!-- Form Name -->
 <legend>Cookie Order Form</legend>
@@ -13,7 +13,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Name</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="C. Monster" class="form-control input-md" required="">
+  <input id="name" name="name" type="text" placeholder="C. Monster" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -31,7 +31,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Email">Email</label>  
   <div class="col-md-5">
-  <input id="Email" name="Email" type="text" placeholder="cmonster@cookietime.com" class="form-control input-md">
+  <input id="email" name="email" type="text" placeholder="cmonster@cookietime.com" class="form-control input-md">
     
   </div>
 </div>
@@ -44,6 +44,7 @@
     
   </div>
 </div>
+
 <br
 <!-- cookieform -->
 <div class="form-group">
@@ -148,6 +149,22 @@ $(document).ready(function() {
     }
 
 		$("#display_total").text(total);
+
+
+    
+    var name = $("#name").val();
+    // we're setting name equal the value in the input field
+    var email = $("#email").val();
+    var phone = $("#phone").val();
+    console.log("name: " + name);
+    console.log("email: " + email);
+    console.log("phone: " + phone);
+
+    var data = { "name": name,  "email": email, "phone": phone };
+    console.log("Data: " + data);
+// this is a json data object containing the data from the page to pass to the server
+    $.post("/order", data)
+    // this .post submits the form
 	});
 });
 
